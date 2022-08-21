@@ -1,10 +1,11 @@
+<?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "python3">
-<!ENTITY author    "dlandon">
-<!ENTITY version   "2022.08.19">
-<!ENTITY launch    "">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/&name;/master">
-<!ENTITY pluginURL "&gitURL;/&name;.plg">
+<!ENTITY name		"python3">
+<!ENTITY author		"dlandon">
+<!ENTITY version	"2022.08.21">
+<!ENTITY launch		"">
+<!ENTITY gitURL		"https://raw.githubusercontent.com/&author;/&name;/master">
+<!ENTITY pluginURL	"&gitURL;/&name;.plg">
 <!ENTITY supportURL	"https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/">
 <!ENTITY packages	"/boot/config/plugins/&name;/packages">
 ]>
@@ -20,6 +21,10 @@
 <CHANGES>
 ##&name;
 ###&version;
+- Add: Save icon to flash and copy to emhttp plugin folder.
+- Add: Set emhttp plugin permissions.
+
+###2022.08.19
 - First release.
 </CHANGES>
 
@@ -73,7 +78,7 @@ Python 3, PIP, and Python systools packages.
 <!--
 python3 icon
 -->
-<FILE Name="/usr/local/emhttp/plugins/&name;/images/python3.png">
+<FILE Name="/boot/config/plugins/&name;/images/python3.png">
 <URL>"&gitURL;/images/python3.png"</URL>
 </FILE>
 
@@ -82,6 +87,14 @@ The 'post-install' script.
 -->
 <FILE Run="/bin/bash">
 <INLINE>
+# Copy icon.
+mkdir -p /usr/local/emhttp/plugins/&name;/images/
+cp /boot/config/plugins/&name;/images/python3.png /usr/local/emhttp/plugins/&name;/images/python3.png
+
+# Set emhttp folder permissions.
+chown -R root:root /usr/local/emhttp/plugins/&name;/
+chmod -R 755 /usr/local/emhttp/plugins/&name;/
+
 echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been installed."
