@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name		"python3">
 <!ENTITY author		"dlandon">
-<!ENTITY version	"2022.08.21">
+<!ENTITY version	"2022.08.24">
 <!ENTITY launch		"">
 <!ENTITY gitURL		"https://raw.githubusercontent.com/&author;/&name;/master">
 <!ENTITY pluginURL	"&gitURL;/&name;.plg">
@@ -21,6 +21,9 @@
 <CHANGES>
 ##&name;
 ###&version;
+- Fix: Cleanup of files on /boot/ not working.
+
+###2022.08.19
 - Add: Save icon to flash and copy to emhttp plugin folder.
 - Add: Set emhttp plugin permissions.
 
@@ -119,8 +122,8 @@ removepkg python-pip-21.3.1-x86_64-2 >/dev/null
 removepkg python-setuptools-63.2.0-x86_64-1 >/dev/null
 
 # Remove possible leftovers
-rm -rf /usr/local/emhttp/plugins/&name; \
-       /boot/config/plugins/&name;
+rm -rf /usr/local/emhttp/plugins/&name;
+rm -rf /boot/config/plugins/&name;
 
 echo ""
 echo "-----------------------------------------------------------"
