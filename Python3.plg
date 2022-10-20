@@ -81,8 +81,8 @@ Python 3, PIP, and Python systools packages.
 <!--
 python3 icon
 -->
-<FILE Name="/boot/config/plugins/&name;/images/python3.png">
-<URL>"&gitURL;/images/python3.png"</URL>
+<FILE Name="/boot/config/plugins/&name;/images/Python3.png">
+<URL>"&gitURL;/images/Python3.png"</URL>
 </FILE>
 
 <!--
@@ -92,7 +92,7 @@ The 'post-install' script.
 <INLINE>
 # Copy icon.
 mkdir -p /usr/local/emhttp/plugins/&name;/images/
-cp /boot/config/plugins/&name;/images/python3.png /usr/local/emhttp/plugins/&name;/images/python3.png
+cp /boot/config/plugins/&name;/images/Python3.png /usr/local/emhttp/plugins/&name;/images/python3.png
 
 # Set emhttp folder permissions.
 chown -R root:root /usr/local/emhttp/plugins/&name;/
