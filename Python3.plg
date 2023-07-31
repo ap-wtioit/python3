@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name		"python3">
 <!ENTITY author		"dlandon">
-<!ENTITY version	"2022.08.24">
+<!ENTITY version	"2023.07.31">
 <!ENTITY launch		"">
 <!ENTITY gitURL		"https://raw.githubusercontent.com/&author;/&name;/master">
 <!ENTITY pluginURL	"&gitURL;/Python3.plg">
@@ -21,6 +21,11 @@
 <CHANGES>
 ##&name;
 ###&version;
+- Fix: Update to python3 3.9.17.
+- Fix: Update python-pip to 22.2.2.
+- Fix: Update python-setuptools to 65.1.1.
+
+###2022.08.24
 - Fix: Cleanup of files on /boot/ not working.
 
 ###2022.08.19
@@ -42,27 +47,27 @@ rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 </FILE>
 
 <!--
-python3-3.9.13-x86_64-2.txz
+python3-3.9.17-x86_64-1.txz
 -->
-<FILE Name="&packages;/python3-3.9.13-x86_64-2.txz" Run="upgradepkg --install-new">
-<URL>"&gitURL;/packages/python3-3.9.13-x86_64-2.txz"</URL>
-<MD5>bdf96ccd36c0f224093eca1bad611944</MD5>
+<FILE Name="&packages;/python3-3.9.17-x86_64-1.txz" Run="upgradepkg --install-new">
+<URL>"&gitURL;/packages/python3-3.9.17-x86_64-1.txz"</URL>
+<MD5>700eda97eb86e4c7c534d44f51fbf597</MD5>
 </FILE>
 
 <!--
-python-pip-21.3.1-x86_64-2.txz
+python-pip-22.2.2-x86_64-1.txz
 -->
-<FILE Name="&packages;/python-pip-21.3.1-x86_64-2.txz" Run="upgradepkg --install-new">
-<URL>"&gitURL;/packages/python-pip-21.3.1-x86_64-2.txz"</URL>
-<MD5>946d93afa6785ba0120a4ec643776627</MD5>
+<FILE Name="&packages;/python-pip-22.2.2-x86_64-1.txz" Run="upgradepkg --install-new">
+<URL>"&gitURL;/packages/python-pip-22.2.2-x86_64-1.txz"</URL>
+<MD5>13f87ab9666f55dcc8483143e2338fb1</MD5>
 </FILE>
 
 <!--
-python-setuptools-63.2.0-x86_64-1.txz
+python-setuptools-65.1.1-x86_64-1.txz
 -->
-<FILE Name="&packages;/python-setuptools-63.2.0-x86_64-1.txz" Run="upgradepkg --install-new">
-<URL>"&gitURL;/packages/python-setuptools-63.2.0-x86_64-1.txz"</URL>
-<MD5>f045abd4a55f57beed619e9fda83f221</MD5>
+<FILE Name="&packages;/python-setuptools-65.1.1-x86_64-1.txz" Run="upgradepkg --install-new">
+<URL>"&gitURL;/packages/python-setuptools-65.1.1-x86_64-1.txz"</URL>
+<MD5>865e5300fd87ece44740ed13c5070c80</MD5>
 </FILE>
 
 <!--
@@ -117,9 +122,9 @@ The 'remove' script.
 echo "Removing packages..."
 
 # Remove all installed packages.
-removepkg python3-3.9.13-x86_64-2 >/dev/null
-removepkg python-pip-21.3.1-x86_64-2 >/dev/null
-removepkg python-setuptools-63.2.0-x86_64-1 >/dev/null
+removepkg python3-3.9.17-x86_64-1 >/dev/null
+removepkg python-pip-22.2.2-x86_64-1 >/dev/null
+removepkg python-setuptools-65.1.1-x86_64-1 >/dev/null
 
 # Remove possible leftovers
 rm -rf /usr/local/emhttp/plugins/&name;
