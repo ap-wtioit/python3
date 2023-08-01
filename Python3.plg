@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name		"python3">
 <!ENTITY author		"dlandon">
-<!ENTITY version	"2022.08.24">
+<!ENTITY version	"2023.08.01">
 <!ENTITY launch		"">
 <!ENTITY gitURL		"https://raw.githubusercontent.com/&author;/&name;/master">
 <!ENTITY pluginURL	"&gitURL;/Python3.plg">
@@ -42,11 +42,11 @@ rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 </FILE>
 
 <!--
-python3-3.9.13-x86_64-2.txz
+python3-3.9.10-x86_64-1.txz
 -->
-<FILE Name="&packages;/python3-3.9.13-x86_64-2.txz" Run="upgradepkg --install-new">
-<URL>"&gitURL;/packages/python3-3.9.13-x86_64-2.txz"</URL>
-<MD5>cc9f34eac94b938a9810f7904e58a992</MD5>
+<FILE Name="&packages;/python3-3.9.10-x86_64-1.txz" Run="upgradepkg --install-new">
+<URL>"&gitURL;/packages/python3-3.9.10-x86_64-1.txz"</URL>
+<MD5>b30dc30d9240efaf178c61bad8211364</MD5>
 </FILE>
 
 <!--
@@ -117,7 +117,7 @@ The 'remove' script.
 echo "Removing packages..."
 
 # Remove all installed packages.
-removepkg python3-3.9.13-x86_64-2 >/dev/null
+removepkg python3-3.9.10-x86_64-1 >/dev/null
 removepkg python-pip-21.3.1-x86_64-2 >/dev/null
 removepkg python-setuptools-63.2.0-x86_64-1 >/dev/null
 
