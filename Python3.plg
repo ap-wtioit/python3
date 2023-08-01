@@ -46,7 +46,7 @@ python3-3.9.13-x86_64-2.txz
 -->
 <FILE Name="&packages;/python3-3.9.13-x86_64-2.txz" Run="upgradepkg --install-new">
 <URL>"&gitURL;/packages/python3-3.9.13-x86_64-2.txz"</URL>
-<MD5>bdf96ccd36c0f224093eca1bad611944</MD5>
+<MD5>cc9f34eac94b938a9810f7904e58a992</MD5>
 </FILE>
 
 <!--
