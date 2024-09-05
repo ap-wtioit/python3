@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name		"python3">
 <!ENTITY author		"dlandon">
-<!ENTITY version	"2024.07.17">
+<!ENTITY version	"2024.09.05">
 <!ENTITY launch		"">
 <!ENTITY gitURL		"https://raw.githubusercontent.com/&author;/&name;/master">
 <!ENTITY pluginURL	"&gitURL;/Python3.plg">
@@ -22,6 +22,9 @@
 <CHANGES>
 ##&name;
 ###&version;
+- Fix: Set max Unraid version to 6.12.13.
+
+###2024.07.17;
 - Fix: Set max Unraid version to 6.12.11.
 
 ###2024.07.06
