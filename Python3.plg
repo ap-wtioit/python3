@@ -17,12 +17,12 @@
 		pluginURL="&pluginURL;"
 		support="&supportURL;"
 		min="6.11.0-rc3;"
-		max="6.12.13">
+		max="6.12.14">
 
 <CHANGES>
 ##&name;
 ###&version;
-- Fix: Set max Unraid version to 6.12.13.
+- Fix: Set max Unraid version to 6.12.14.
 
 ###2024.07.17;
 - Fix: Set max Unraid version to 6.12.11.
